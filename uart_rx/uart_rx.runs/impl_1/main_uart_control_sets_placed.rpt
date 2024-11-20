@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Jun 30 13:16:03 2024
+| Host         : DESKTOP-RRHQSGG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_uart_control_sets_placed.rpt
+| Design       : main_uart
+| Device       : xc7z010
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    33 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      4 |            1 |
+|      8 |            2 |
+|     11 |            1 |
+|     12 |            1 |
+|     13 |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | Yes                    |               8 |            2 |
+| No           | Yes                   | No                     |              38 |           13 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              15 |            3 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------------------------+---------------------------------------+-------------------------------------------------------+------------------+----------------+
+|                             Clock Signal                             |             Enable Signal             |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++----------------------------------------------------------------------+---------------------------------------+-------------------------------------------------------+------------------+----------------+
+|  Inst_uart_rx/Inst_mod_m_counter/FSM_sequential_Present_State_reg[1] |                                       |                                                       |                1 |              1 |
+|  clk_IBUF_BUFG                                                       |                                       |                                                       |                1 |              1 |
+|  clk_IBUF_BUFG                                                       | Inst_uart_rx/Inst_mod_m_counter2/E[0] | Inst_uart_rx/AS[0]                                    |                1 |              4 |
+|  clk_IBUF_BUFG                                                       |                                       | Inst_uart_rx/AS[0]                                    |                2 |              8 |
+|  Inst_uart_tx/s_data_reg[7]_i_1_n_0                                  |                                       |                                                       |                2 |              8 |
+|  clk_IBUF_BUFG                                                       | Inst_uart_tx/Inst_mod_m_counter/E[0]  | Inst_uart_rx/AS[0]                                    |                2 |             11 |
+|  clk_IBUF_BUFG                                                       |                                       | Inst_uart_rx/Inst_mod_m_counter2/r_reg[11]_i_1__0_n_0 |                4 |             12 |
+|  clk_IBUF_BUFG                                                       |                                       | Inst_uart_rx/Inst_mod_m_counter2/SR[0]                |                4 |             13 |
+|  clk_IBUF_BUFG                                                       |                                       | Inst_uart_tx/Inst_mod_m_counter/p_0_in                |                5 |             13 |
++----------------------------------------------------------------------+---------------------------------------+-------------------------------------------------------+------------------+----------------+
+
+
