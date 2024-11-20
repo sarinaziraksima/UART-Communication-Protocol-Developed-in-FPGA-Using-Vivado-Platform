@@ -1,4 +1,4 @@
-# UART-Communication-Protocol-Developed-in-FPGA-Using-Vivado-Platform
+# UART-Communication-Protocol-Developed-in-FPGA-Using-Xilinx-Vivado-Platform
 
 In this project, we aimed to implement UART communication using the Xilinx Vivado program. The code is written in VHDL, with separate implementations for both transmitting and receiving, which were practically tested using a terminal. 
 
